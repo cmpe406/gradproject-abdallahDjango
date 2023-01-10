@@ -110,7 +110,7 @@ class QuestionSerializer(serializers.ModelSerializer):
     #         self.Meta.depth = 1
 
 class ExamSerializer(serializers.ModelSerializer):
-    questions = QuestionSerializer(many=True) # this field should match the related name specified in the model connected to this model
+    questions = QuestionSerializer(many=True) # this field should match the related name specified in the model connected to this model (Exam)
     class Meta:
         model = models.Exam
         fields = ("id","name", "description", "number_of_questions", "time", "course", "questions")

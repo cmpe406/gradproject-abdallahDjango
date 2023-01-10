@@ -43,8 +43,8 @@ class ChairmanDashboard(generics.RetrieveAPIView):
 
 @csrf_exempt
 def chairman_login(request):
-    email = request.POST['email']
-    password = request.POST['password']
+    email = request.POST.get('email')
+    password = request.POST.get('password')
     try:
         chairData = models.Chairman.objects.get(
             email=email, password=password)

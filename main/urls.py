@@ -8,8 +8,8 @@ urlpatterns = [
      path('chairman/', views.ChairmanList.as_view()),
      path('chairman/<int:pk>/', views.ChairmanDetail.as_view()),
      path('chairman/dashboard/<int:pk>/', views.ChairmanDashboard.as_view()),
-     path('chair-login', views.chairman_login),
-     path('chairman/change-password/<int:chairman_id>',
+     path('chair-login/', views.chairman_login),
+     path('chairman/change-password/<int:chairman_id>/',
           views.chairman_change_password),
 
 
