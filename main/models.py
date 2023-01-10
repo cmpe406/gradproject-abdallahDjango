@@ -136,7 +136,7 @@ class Course(models.Model):
     prerequisites = models.TextField(null=True)
     category = models.ForeignKey(CourseCategory, on_delete=models.CASCADE, related_name='category_courses')
     teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE, related_name='teacher_courses')
-    student = models.ManyToManyField(Student, related_name='course_student') #ManyToManyField does not have on_delete
+    student = models.ManyToManyField(Student, related_name='course_student') #ManyToManyField does not have "on_delete"
 
 
     class Meta:
